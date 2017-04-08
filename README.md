@@ -92,3 +92,12 @@ optional arguments:
   --minout x            minimum PID controller output (default: 0)
   --maxout x            maximum PID controller output (default: 100)
 ```
+
+# Installation
+1. Install _git_ and _python3_
+2. Clone this repository:  
+`git clone https://github.com/hirschmann/pid-autotune.git`
+3. Install project dependencies:  
+`pip install matplotlib`
+
+After you have completed these steps, you should be able to run _sim.py_ as shown above. If plots are not shown, you have to configure the matplotlib backend, see [What is a backend?](http://matplotlib.org/faq/usage_faq.html#what-is-a-backend)
