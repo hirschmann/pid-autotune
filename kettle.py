@@ -4,12 +4,11 @@ import math
 class Kettle(object):
     """A simulated brewing kettle.
 
-    Parameters
-    ----
-    - diameter (float): Kettle diameter in centimeters.
-    - volume (float): Content volume in liters.
-    - temp (float): Initial content temperature in degree celsius.
-    - density (float): Content density.
+    Args:
+        diameter (float): Kettle diameter in centimeters.
+        volume (float): Content volume in liters.
+        temp (float): Initial content temperature in degree celsius.
+        density (float): Content density.
     """
     # specific heat capacity of water: c = 4.182 kJ / kg * K
     SPECIFIC_HEAT_CAP_WATER = 4.182
@@ -36,12 +35,10 @@ class Kettle(object):
     def heat(self, power, duration, efficiency=0.98):
         """Heat the kettle's content.
 
-        Parameters
-        ----
-        - power (float): The power in kW.
-        - duration (float): The duration in seconds.
-        - efficiency (float): The efficiency as number between 0 and 1.
-
+        Args:
+            power (float): The power in kW.
+            duration (float): The duration in seconds.
+            efficiency (float): The efficiency as number between 0 and 1.
         """
         self._temp += self._get_deltaT(power * efficiency, duration)
         return self._temp
@@ -49,13 +46,11 @@ class Kettle(object):
     def cool(self, duration, ambient_temp, heat_loss_factor=1):
         """Make the content loose heat.
 
-        Parameters
-        ----------
-        - duration (float): The duration in seconds.
-        - ambient_temp (float): The ambient temperature in degree celsius.
-        - heat_loss_factor (float): Increase or decrease the heat loss by a
+        Args:
+            duration (float): The duration in seconds.
+            ambient_temp (float): The ambient temperature in degree celsius.
+            heat_loss_factor (float): Increase or decrease the heat loss by a
             specified factor.
-
         """
         # Q = k_w * A * (T_kettle - T_ambient)
         # P = Q / t
