@@ -25,7 +25,7 @@ class Kettle(object):
         height = (volume * 1000) / (math.pi * math.pow(radius, 2))
 
         # surface in m^2
-        self._surface = (2 * math.pi * math.pow(radius, 2) + 2 * radius * height) / 10000
+        self._surface = (2 * math.pi * math.pow(radius, 2) + 2 * math.pi * radius * height) / 10000
 
     @property
     def temperature(self):
